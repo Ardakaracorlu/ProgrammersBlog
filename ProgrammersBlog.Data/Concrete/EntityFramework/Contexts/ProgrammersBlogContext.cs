@@ -16,10 +16,11 @@ namespace ProgrammersBlog.Data.Concrete.EntityFramework.Contexts
         public DbSet<Comment> Comments { get; set; }
         public DbSet<Role> Roles { get; set; }
         public DbSet<User> Users { get; set; }
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) // DbPath
         {
             optionsBuilder.UseSqlServer(
                 @"Server=BTAKARACORLU\SQL;Database=ProgrammersBlog;Trusted_Connection=True;Connect Timeout=30;MultipleActiveResultSets=True;");
+            
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
