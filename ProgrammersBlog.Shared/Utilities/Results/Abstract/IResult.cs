@@ -7,7 +7,7 @@ using ProgrammersBlog.Shared.Utilities.Results.ComplexTypes;
 
 namespace ProgrammersBlog.Shared.Utilities.Results.Abstract
 {
-    interface IResult
+    public interface IResult
     {
 
         public ResultStatus ResultStatus { get;} // ResultStatus.Succes şeklinde kullanılır.

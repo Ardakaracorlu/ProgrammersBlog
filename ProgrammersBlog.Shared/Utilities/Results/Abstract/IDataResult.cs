@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProgrammersBlog.Shared.Utilities.Results.Abstract
 {
-    interface IDataResult<out T>:IResult // Bizlere bir Data da taşıyabilir. IList veya IEnumarable taşımak için başına out koyuldu.
+    public interface IDataResult<out T>:IResult // Bizlere bir Data da taşıyabilir. IList veya IEnumarable taşımak için başına out koyuldu.
     {
         public T Data { get; }
 
