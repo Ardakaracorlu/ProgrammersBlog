@@ -68,6 +68,13 @@ namespace ProgrammersBlog.Mvc.Areas.Admin.Controllers
             return Json(categories);
         }
 
+        public async Task<JsonResult> Delete(int categoryId)
+        {
+            var result = await _categoryService.Delete(categoryId, "Arda Karaçorlu");
+            var ajaxResult = JsonSerializer.Serialize(result);
+            return Json(ajaxResult);
+        }
+
 
     }
 }
